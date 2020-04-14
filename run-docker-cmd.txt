@@ -1,4 +1,4 @@
-docker build -t slate_app .
+sudo docker build -t slate_app .
 
 
 sudo docker run --rm -v $PWD/source:/usr/src/app/source -p 4567:4567 -it slate_app
