@@ -12,6 +12,7 @@ toc_footers:
 
 includes:
   - errors
+  - _guide_extend-zenbox
 
 search: true
 ---
