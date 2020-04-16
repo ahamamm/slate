@@ -2,9 +2,9 @@
 title: API Reference ansh
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - c#
-  - xml
-  - json
+  - csharp: C#
+  - xml: XML
+  - json: JSON
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
