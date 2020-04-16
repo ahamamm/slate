@@ -17,6 +17,40 @@ To extend functionality we will need to create a  new C# project that contains s
 	* process method takes one argument from type WorkZen.Foundation.ZenboxTasks.Pipelines. GetToDoPipelineArgs
 	* public void Process(GetToDoPipelineArgs args)
 	* Add your logic in the method
+	
+	in the code below we created a class and process method 
+	```c#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using MyWorkzen.Foundation.Custom.Services;
+using WorkZen.Foundation.ZenboxTasks.Pipelines;
+using WorkZen.Foundation.ZenboxTasks.Models;
+using WorkZen.Foundation.AzureAD.Authentication.Helpers;
+
+namespace MyWorkzen.Foundation.Custom.Pipelines
+{
+    public class GetToDoTasksPipeline
+    {
+        public void Process(GetToDoPipelineArgs args)
+        {
+            if (args.Tasks == null)
+                args.Tasks = new List<ZenboxTask>();
+            var claimIdentity = TokenHelper.GetClaimsIdentity();
+            // First get user claims
+            var claims = claimIdentity.Claims.ToList();
+
+            //Filter specific claim    
+            string user = claims?.FirstOrDefault(x => x.Type.Equals("UserName", StringComparison.OrdinalIgnoreCase))?.Value;
+
+            ToDoService service = new ToDoService();
+            args.Tasks.AddRange(service.getTodoTasks(user, args.Top, args.Skip, args.FilterBy, args.SortBy));
+        }
+    }
+}
+	```
+	
+	
 
 2. **Configuration**
 From your sitecore portal file system path  go to bin directory getfollowing App_Config directory
