@@ -12,7 +12,6 @@ RUN bundle install
 
 COPY . /usr/src/app
 VOLUME /usr/src/app/source
-RUN bundle install
 
 EXPOSE 4567
 
