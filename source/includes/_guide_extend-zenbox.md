@@ -9,6 +9,16 @@ To extend functionality we will need to create a  new C# project that contains s
 
 1. **C# project**
 
+	* From your sitecore portal file system path  go to bin directory getfollowing DLLs
+		* WorkZen.Foundation.ZenboxTasks.dll
+		* WorkZen.Foundation.AzureAD.Authentication.dll
+	* In your project add reference to both DLLs
+	* Add a new class
+	* Within a class add a new void method process
+	* process method takes one argument from type WorkZen.Foundation.ZenboxTasks.Pipelines. GetToDoPipelineArgs
+	* public void Process(GetToDoPipelineArgs args)
+	* Add your logic in the method	
+	check sample code on the right side C# tab
 
 ```c#
 using System;
@@ -39,27 +49,79 @@ namespace MyWorkzen.Foundation.Custom.Pipelines
         }
     }
 }
-```
-
-	* From your sitecore portal file system path  go to bin directory getfollowing DLLs
-		* WorkZen.Foundation.ZenboxTasks.dll
-		* WorkZen.Foundation.AzureAD.Authentication.dll
-	* In your project add reference to both DLLs
-	* Add a new class
-	* Within a class add a new void method process
-	* process method takes one argument from type WorkZen.Foundation.ZenboxTasks.Pipelines. GetToDoPipelineArgs
-	* public void Process(GetToDoPipelineArgs args)
-	* Add your logic in the method	
-	check sample code in the right C# tab
-
-	
+```	
 	
 
 2. **Configuration**
-From your sitecore portal file system path  go to bin directory getfollowing App_Config directory
-Get WorkZen.Foundation.MSGraph.config file 
-Update GetToDoTasksPipeline processor tag to be like
-`<processor type="<class full name space>, <DLL name>" />`
+	*From your sitecore portal file system path  go to bin directory getfollowing App_Config directory
+	*Get WorkZen.Foundation.MSGraph.config file 
+	*Update GetToDoTasksPipeline processor tag to be like
+	*`<processor type="<class full name space>, <DLL name>" />`
+	
+	original XML document check right side XML tab
+	
+```xml
+<configuration>
+  <sitecore>myworkzen.extension.test
+   
+    <pipelines>
+      <GetUserPayloadPipeline>
+        <processor type="WorkZen.Foundation.MSGraph.Pipelines.MSGraphUserProfilePipeline, WorkZen.Foundation.MSGraph" />
+      </GetUserPayloadPipeline>
+      <GetToDoTasksPipeline>
+        <processor type="MyWorkzen.Foundation.Custom.Pipelines.GetToDoTasksPipeline, myworkzen.extension.test" />
+      </GetToDoTasksPipeline>
+      <CompleteToDoTasksPipeline>
+        <processor type="MyWorkzen.Foundation.Custom.Pipelines.CompleteToDoTasksPipeline, myworkzen.extension.test" />
+      </CompleteToDoTasksPipeline>
+      <CreateToDoTasksPipeline>
+        <processor type="MyWorkzen.Foundation.Custom.Pipelines.CreateToDoTasksPipeline, myworkzen.extension.test" />
+      </CreateToDoTasksPipeline>
+      <DeleteToDoTasksPipeline>
+        <processor type="MyWorkzen.Foundation.Custom.Pipelines.DeleteToDoTasksPipeline, myworkzen.extension.test" />
+      </DeleteToDoTasksPipeline>
+      <UpdateToDoTasksPipeline>
+        <processor type="MyWorkzen.Foundation.Custom.Pipelines.UpdateToDoTasksPipeline, myworkzen.extension.test" />
+      </UpdateToDoTasksPipeline>
+      <ReOrderToDoTasksPipeline>
+        <processor type="MyWorkzen.Foundation.Custom.Pipelines.ReorderToDoTasksPipeline, myworkzen.extension.test" />
+      </ReOrderToDoTasksPipeline>
+    </pipelines>
+  </sitecore>
+</configuration>
+```
+	mdified XML document check right side XML tab
+	
+```xml
+<configuration>
+  <sitecore>myworkzen.extension.test
+   
+    <pipelines>
+      <GetUserPayloadPipeline>
+        <processor type="WorkZen.Foundation.MSGraph.Pipelines.MSGraphUserProfilePipeline, WorkZen.Foundation.MSGraph" />
+      </GetUserPayloadPipeline>
+      <GetToDoTasksPipeline>
+        <processor type="MyWorkzen.Foundation.Custom.Pipelines.GetToDoTasksPipeline, myworkzen.extension.test" />
+      </GetToDoTasksPipeline>
+      <CompleteToDoTasksPipeline>
+        <processor type="MyWorkzen.Foundation.Custom.Pipelines.CompleteToDoTasksPipeline, myworkzen.extension.test" />
+      </CompleteToDoTasksPipeline>
+      <CreateToDoTasksPipeline>
+        <processor type="MyWorkzen.Foundation.Custom.Pipelines.CreateToDoTasksPipeline, myworkzen.extension.test" />
+      </CreateToDoTasksPipeline>
+      <DeleteToDoTasksPipeline>
+        <processor type="MyWorkzen.Foundation.Custom.Pipelines.DeleteToDoTasksPipeline, myworkzen.extension.test" />
+      </DeleteToDoTasksPipeline>
+      <UpdateToDoTasksPipeline>
+        <processor type="MyWorkzen.Foundation.Custom.Pipelines.UpdateToDoTasksPipeline, myworkzen.extension.test" />
+      </UpdateToDoTasksPipeline>
+      <ReOrderToDoTasksPipeline>
+        <processor type="MyWorkzen.Foundation.Custom.Pipelines.ReorderToDoTasksPipeline, myworkzen.extension.test" />
+      </ReOrderToDoTasksPipeline>
+    </pipelines>
+  </sitecore>
+</configuration>
+```
 
 3. **Deployment**
 Upload your DLL file to  sitecore bin directory
