@@ -8,6 +8,7 @@ In this section We will walk you through steps needed to extend Zenbox GetToDoTa
 To extend functionality we will need to create a  new C# project that contains static data sample and next edit configuration then deploy new artifacts to sitecore portal.
 
 1. **C# project**
+
 ```c#
 using System;
 using System.Collections.Generic;
@@ -38,6 +39,7 @@ namespace MyWorkzen.Foundation.Custom.Pipelines
     }
 }
 ```
+
 	* From your sitecore portal file system path  go to bin directory getfollowing DLLs
 		* WorkZen.Foundation.ZenboxTasks.dll
 		* WorkZen.Foundation.AzureAD.Authentication.dll
