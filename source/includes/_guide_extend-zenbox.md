@@ -19,7 +19,8 @@ To extend functionality we will need to create a  new C# project that contains s
 	* Add your logic in the method
 	
 	in the code below we created a class and process method 
-	```c#
+	
+```c#
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,7 +49,7 @@ namespace MyWorkzen.Foundation.Custom.Pipelines
         }
     }
 }
-	```
+```
 	
 	
 
