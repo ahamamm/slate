@@ -20,7 +20,7 @@ To extend functionality we will need to create a  new C# project that contains s
 	
 check sample code on the right side C# tab
 
-```c#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
