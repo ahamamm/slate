@@ -9,6 +9,7 @@ To extend functionality we will need to create a  new C# project that contains s
 
 1. **C# project**
 
+
 ```c#
 using System;
 using System.Collections.Generic;
@@ -49,7 +50,7 @@ namespace MyWorkzen.Foundation.Custom.Pipelines
 	* process method takes one argument from type WorkZen.Foundation.ZenboxTasks.Pipelines. GetToDoPipelineArgs
 	* public void Process(GetToDoPipelineArgs args)
 	* Add your logic in the method	
-	check sample code in the right
+	check sample code in the right C# tab
 
 	
 	
