@@ -2,10 +2,9 @@
 title: API Reference ansh
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - shell
-  - ruby
-  - python
-  - javascript
+  - xml
+  - c#
+  - json
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
