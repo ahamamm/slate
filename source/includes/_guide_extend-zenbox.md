@@ -129,7 +129,7 @@ check original and mdified XML documents check right side XML tab
 	* Restart sitecore portal instance
 
 4. **Sample**
-	* Download zip file from following URL [external link](https://drive.google.com/file/d/1TxccEIy6CKi7U51quKs3grMdjcUGTqPS/view?usp=sharing) .
+	* Download zip file from following URL [https://drive.google.com/file/d/1TxccEIy6CKi7U51quKs3grMdjcUGTqPS/view?usp=sharing](https://drive.google.com/file/d/1TxccEIy6CKi7U51quKs3grMdjcUGTqPS/view?usp=sharing) .
 	* Dependencies DLLs are located in dependencies directory
 	* Create C# VS solution
 	* Add myworkzen.extension.test to your VS solution
