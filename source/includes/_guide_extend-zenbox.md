@@ -29,6 +29,7 @@ using WorkZen.Foundation.ZenboxTasks.Pipelines;
 using WorkZen.Foundation.ZenboxTasks.Models;
 using WorkZen.Foundation.AzureAD.Authentication.Helpers;
 
+//sample c# class
 namespace MyWorkzen.Foundation.Custom.Pipelines
 {
     public class GetToDoTasksPipeline
@@ -58,9 +59,10 @@ namespace MyWorkzen.Foundation.Custom.Pipelines
 	* Update GetToDoTasksPipeline processor tag to be like
 	* `<processor type="<class full name space>, <DLL name>" />`
 	
-original XML document check right side XML tab
+check mdified and  XML documents check right side XML tab
 	
 ```xml
+<!--orignal xml configuration -->
 <configuration>
   <sitecore>myworkzen.extension.test
     <pipelines>
@@ -89,10 +91,9 @@ original XML document check right side XML tab
   </sitecore>
 </configuration>
 ```
-
-mdified XML document check right side XML tab
 	
 ```xml
+<!--modified xml configuration -->
 <configuration>
   <sitecore>myworkzen.extension.test
     <pipelines>
