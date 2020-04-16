@@ -18,7 +18,8 @@ To extend functionality we will need to create a  new C# project that contains s
 	* process method takes one argument from type WorkZen.Foundation.ZenboxTasks.Pipelines. GetToDoPipelineArgs
 	* public void Process(GetToDoPipelineArgs args)
 	* Add your logic in the method	
-	check sample code on the right side C# tab
+	
+check sample code on the right side C# tab
 
 ```c#
 using System;
@@ -53,12 +54,12 @@ namespace MyWorkzen.Foundation.Custom.Pipelines
 	
 
 2. **Configuration**
-	*From your sitecore portal file system path  go to bin directory getfollowing App_Config directory
-	*Get WorkZen.Foundation.MSGraph.config file 
-	*Update GetToDoTasksPipeline processor tag to be like
-	*`<processor type="<class full name space>, <DLL name>" />`
+	* From your sitecore portal file system path  go to bin directory getfollowing App_Config directory
+	* Get WorkZen.Foundation.MSGraph.config file 
+	* Update GetToDoTasksPipeline processor tag to be like
+	* `<processor type="<class full name space>, <DLL name>" />`
 	
-	original XML document check right side XML tab
+original XML document check right side XML tab
 	
 ```xml
 <configuration>
@@ -90,7 +91,8 @@ namespace MyWorkzen.Foundation.Custom.Pipelines
   </sitecore>
 </configuration>
 ```
-	mdified XML document check right side XML tab
+
+mdified XML document check right side XML tab
 	
 ```xml
 <configuration>
