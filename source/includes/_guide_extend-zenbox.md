@@ -59,7 +59,7 @@ namespace MyWorkzen.Foundation.Custom.Pipelines
 	* Update GetToDoTasksPipeline processor tag to be like
 	* `<processor type="<class full name space>, <DLL name>" />`
 	
-check mdified and  XML documents check right side XML tab
+check original and mdified XML documents check right side XML tab
 	
 ```xml
 <!--orignal xml configuration -->
@@ -124,11 +124,13 @@ check mdified and  XML documents check right side XML tab
 ```
 
 3. **Deployment**
-Upload your DLL file to  sitecore bin directory
-Upload your configuration file to App_Config directory
-Restart sitecore portal instance
+	* Upload your DLL file to  sitecore bin directory
+	* Upload your configuration file to App_Config directory
+	* Restart sitecore portal instance
 
 4. **Sample**
-Extract attached zip file
-Dependencies DLLs are located in dependencies directory
-Open solution using VS from <extractedfolder>\pathmyworkzen\src\myworkzen\myworkzen.extension.test  
+	* Download zip file from following URL [external link](https://drive.google.com/file/d/1TxccEIy6CKi7U51quKs3grMdjcUGTqPS/view?usp=sharing) .
+	* Dependencies DLLs are located in dependencies directory
+	* Create C# VS solution
+	* Add myworkzen.extension.test to your VS solution
+	* ADD dependencies to VS project
